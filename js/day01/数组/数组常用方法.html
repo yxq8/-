@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=[1,2,3,4];
+        var arr1=['e','a','c','b'];
+        function push(){
+          arr.push(6);//给数组的末尾添加一个或多个元素
+          output(arr);
+        }
+        function pop(){
+            arr.pop();//移除数组末尾最后一项
+            output(arr);
+        }
+        function unshift(){//将一个或多个元素添加到数组的开头
+           arr.unshift(-1,0);
+           output(arr);
+
+        }
+        function shift(){
+            arr.shift();//删除数组第一个元素
+            output(arr);
+        }
+        function reverse(){
+            arr.reverse();
+            output(arr);
+        }
+        function sort(){
+            arr1.sort();
+            output(arr1);
+        }
+        function concat(){//将多个数组拼接成一个数组
+          var arr2=arr.concat(arr1);
+          output(arr2);
+        }
+        function slice(){//slice(start,end)：返回从原数组中指定开始下标到结束下标之间的项组成的新数组
+         var arr3=arr.slice(-3,-1);//-1表示最后一位，-2表示倒二，以此类推
+          output(arr3); 
+        }
+        function splice(){//splice(start,deleteCount,val1,val2,...)：从start位置开始删除deleteCount项，并从该位置起插入val1,val2,... 
+           arr.splice(1,2,7,8);
+           output(arr);
+        }
+        function join(){
+            var str=arr.join('-');//将数组的每一项用指定字符连接形成一个字符串。默认连接字符为 “,” 逗号。
+            console.log(str);
+        }
+        function split(){
+            var str="2019-09-01";
+            var arr5=[];
+            var arr5=str.split('-');//将字符串以“-”分割为数组。
+            console.log(arr5);
+        }
+        function tostring(){
+            var str1=arr.toString();
+            console.log(str1);//将数组转化为字符串,以逗号间隔
+        }
+        function map(){//将数组中的每个元素调用一个提供的函数，结果作为一个新的数组返回
+         var arr4=arr.map( x=>x*2);
+         output(arr4);
+
+        }
+        function forEach() {//数组循环遍历
+           arr.forEach(function(e){
+               console.log(e);
+           })
+        }
+        function filter(){
+            var arr6=arr.filter(x=> x>2);//过滤数组中，符合条件的元素并返回一个新的数组。
+            output(arr6);
+        }
+        function every(){//Array.every(function)，对数组中的每一项进行判断，若都符合则返回true，否则返回false。
+            var flag= arr.every(x=> x>2);
+             console.log(flag);
+        }
+        function some(){//Array.some(function)，对数组中的每一项进行判断，若都不符合则返回false，否则返回true。
+            var flag= arr.some(x=> x>2);
+             console.log(flag);
+        }
+        function reduce(){//.Array.reduce(function)，reduce() 方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。
+           var sum=arr.reduce((a,b)=>a+b);
+           console.log(sum);
+        }
+
+        function output(arr){
+            for(var i in arr){
+                console.log(arr[i]);
+            }
+            console.log("数组长度"+arr.length)
+        }
+    </script>
+</head>
+<body>
+    <input  type="button"  value="push给数组的末尾添加一个或多个元素" onclick="push()"/><br>
+    <input  type="button"  value="pop移除数组末尾最后一项" onclick="pop()"/><br>
+    <input  type="button"  value="unshift将一个或多个元素添加到数组的开头" onclick="unshift()"/><br>
+    <input  type="button"  value="shift删除数组第一个元素" onclick="shift()"/><br>
+    <input  type="button"  value="reverse反转数组顺序" onclick="reverse()"/><br>
+    <input  type="button"  value="sort按照字母顺序排序" onclick="sort()"/><br>
+    <input  type="button"  value="concat将多个数组拼接成一个数组" onclick="concat()"/><br>
+    <input  type="button"  value="slice从数组中截取一个新数组" onclick="slice()"/><br>
+    <input  type="button"  value="splice实现对数组增删改" onclick="splice()"/><br>
+    <input  type="button"  value="split字符串转换为数组" onclick="split()"/><br>
+    <input  type="button"  value="join数组转换为字符串" onclick="join()"/><br>
+    <input  type="button"  value="toString数组转换为字符串" onclick="tostring()"/><br>
+    <input  type="button"  value="map调用一个提供的函数组成新函数" onclick="map()"/><br>
+    <input  type="button"  value="filter过滤数组，符合条件的元素并返回一个新的数组" onclick="filter()"/><br>
+    <input  type="button"  value="every对数组中的每一项进行判断，若都符合则返回true" onclick="every()"/><br>
+    <input  type="button"  value="some对数组中的每一项进行判断，若都不符合则返回flase" onclick="some()"/><br>
+    <input  type="button"  value="reduce所有元素调用返回函数" onclick="reduce()"/><br>
+    <input  type="button"  value="foreach数组循环遍历" onclick="forEach()"/><br>
+</body>
+</html>
