@@ -1,0 +1,26 @@
+1、新增语义标签：语义标签主要针对搜索引擎，移动端使用更多
+（1）<header></header>:头部标签
+（2）<nav></nav>:导航标签
+（3）<article></article>:内容标签
+（4）<section></section>:块级标签
+（5）<aside></aside>:侧边栏标签
+（6）<footer></footer>:尾部标签
+
+2、新增多媒体标签：谷歌浏览器不支持自动播放
+（1）音频：<audio></audio>
+常见属性：1.autoplay:autoplay;音频就绪后自动播放
+         2.controls:controls;向用户显示控件，如播放按钮
+         3.loop:loop;音频结束后自动重新播放
+         4.src:url;音频地址
+
+
+（2）视频：<video></video>
+常见属性：1.autoplay:autoplay;视频就绪后自动播放
+         2.controls:controls;向用户显示控件，如播放按钮
+         3.loop:loop;音频结束后自动重新播放
+         4.src:url;视频地址
+         5.width:像素大小;播放器宽度
+         6.height:像素大小；播放器高度
+         7.preload:proload;是否加载完再播放
+         8.poster:Imgurl;加载等待的画面图片
+         9.muted:muted；静音播放
